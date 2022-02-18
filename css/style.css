@@ -1,5 +1,8 @@
-/* Reset box sizing */
+/* --------------- */
+/* ---- Reset ---- */
+/* --------------- */
 
+/* Reset box sizing */
 *,
 *::before,
 *::after {
@@ -7,7 +10,6 @@
 }
 
 /* Reset default margins */
-
 body,
 h1,
 h2,
@@ -24,10 +26,51 @@ picture {
 }
 
 /* Set core scroll behavior */
-
 html:focus-within {
     scroll-behavior: smooth;
 }
+
+/* Set core body behavior */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* Set core img behavior */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Set core form behavior */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* --------------- */
+/* -- Utilities -- */
+/* --------------- */
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.container {
+    padding-inline: 2em;
+    margin-inline: auto;
+    max-width: 80 rem;
+}
+
 
 /* --------------- */
 /* Website Styling */
