@@ -80,13 +80,15 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
-header {
+/* Header Styling */
+
+.container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     height: 10vh;
     width: 100vw;
-    padding: 30px 5%;
+    padding: 60px 5%;
 }
 
 .nav-logo {
@@ -110,9 +112,29 @@ header {
     text-decoration: none;
 }
 
+/* End Header */
+
+/* Main Styling */
+
+.main-container {
+    display: flex;
+    padding: 30px;
+    border-top: 2px solid white;
+}
+
 h1 {
     color: rgb(255, 255, 255);
     text-align: center;
     margin: 1px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+/* End Main */
+
+/* Footer Styling */
+
+.footer-container {
+    display: flex;
+}
+
+/* End Footer */
