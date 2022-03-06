@@ -52,37 +52,16 @@ select {
 }
 
 /* --------------- */
-/* -- Utilities -- */
-/* --------------- */
-
-.flex {
-    display: flex;
-    gap: var(--gap, 1rem);
-}
-
-.grid {
-    display: grid;
-    gap: var(--gap, 1rem);
-}
-
-.container {
-    padding-inline: 2em;
-    margin-inline: auto;
-    max-width: 80 rem;
-}
-
-
-/* --------------- */
 /* Website Styling */
 /* --------------- */
 
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(250, 248, 240);
 }
 
 /* Header Styling */
 
-.container {
+.header-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -106,9 +85,9 @@ body {
 }
 
 .nav-list li a {
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 18px;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    color: rgb(53, 55, 57);
+    font-size: 20px;
     text-decoration: none;
 }
 
@@ -118,15 +97,23 @@ body {
 
 .main-container {
     display: flex;
-    padding: 30px;
-    border-top: 2px solid white;
+    flex-direction: column;
+    border-top: 1px solid rgb(53, 55, 57);
+    
 }
 
-h1 {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 1px;
-    font-family: Arial, Helvetica, sans-serif;
+.first-container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(250, 248, 240);
+    opacity: 0.7;
+    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, rgb(250, 248, 240) 10px ), repeating-linear-gradient( rgb(165, 212, 220), rgb(65, 124, 201) );
+}
+
+.second-container {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(130deg, rgba(250, 248, 240, 1), rgba(228, 222, 210, 1), rgba(64, 124, 201, 0.65));
 }
 
 /* End Main */
@@ -135,6 +122,11 @@ h1 {
 
 .footer-container {
     display: flex;
+    flex-direction: row;
+    height: 40vh;
+    width: 100vw;
+    border-top: 1px solid rgb(53, 55, 57);
+    background: linear-gradient(30deg, rgba(250, 248, 240, 1), rgba(228, 222, 210, 1), rgba(64, 124, 201, 0.7));
 }
 
 /* End Footer */
