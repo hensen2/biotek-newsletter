@@ -1,6 +1,19 @@
-/* --------------- */
-/* ---- Reset ---- */
-/* --------------- */
+/* ------------------- */
+/* ---- Variables ---- */
+/* ------------------- */
+
+:root {
+    --milk-white: 250, 248, 240;
+    --cobalt: 53, 55, 57;
+    --light-taupe: 228, 222, 210;
+    --baby-aqua: 165, 212, 220;
+    --biotek-blue: 64, 124, 201;
+    --glass: rgba(255, 255, 255, 0.06);
+}
+
+/* ------------------- */
+/* ------ Reset ------ */
+/* ------------------- */
 
 /* Reset box sizing */
 *,
@@ -51,12 +64,12 @@ select {
     font: inherit;
 }
 
-/* --------------- */
-/* Website Styling */
-/* --------------- */
+/* ------------------- */
+/* - Website Styling - */
+/* ------------------- */
 
 body {
-    background-color: rgb(250, 248, 240);
+    background-color: rgb(var(--milk-white));
 }
 
 /* Header Styling */
@@ -86,8 +99,8 @@ body {
 
 .nav-list li a {
     font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
-    color: rgb(53, 55, 57);
-    font-size: 20px;
+    font-size: 30px;
+    color: rgba(var(--cobalt), 1);
     text-decoration: none;
 }
 
@@ -98,22 +111,46 @@ body {
 .main-container {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgb(53, 55, 57);
-    
+    border-top: 1px solid rgba(var(--cobalt), 1);
 }
 
-.first-container {
+.top-container {
+    display: flex;
     height: 100vh;
     width: 100vw;
-    background-color: rgb(250, 248, 240);
-    opacity: 0.7;
-    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, rgb(250, 248, 240) 10px ), repeating-linear-gradient( rgb(165, 212, 220), rgb(65, 124, 201) );
+    background: linear-gradient(185deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.5), rgba(var(--baby-aqua), 0.45));
 }
 
-.second-container {
+.middle-container {
+    display: flex;
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(130deg, rgba(250, 248, 240, 1), rgba(228, 222, 210, 1), rgba(64, 124, 201, 0.65));
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--milk-white), 1);
+    opacity: 0.6;
+    background-image: repeating-radial-gradient( circle at 0 0, transparent 0, rgba(var(--milk-white), 0.9) 13px ),
+                    repeating-linear-gradient( rgba(var(--baby-aqua), 1), 
+                    rgba(var(--biotek-blue), 1) );
+}
+
+.bottom-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(130deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.9), rgba(var(--biotek-blue), 0.6));
+}
+
+.glass-container {
+    display: flex;
+    height: 92vh;
+    width: 95vw;
+    margin: 10px;
+    border-radius: 10px;
+    border: 2px solid rgba(var(--cobalt), 0.7);
+    background-color: var(--glass);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 /* End Main */
@@ -125,8 +162,8 @@ body {
     flex-direction: row;
     height: 40vh;
     width: 100vw;
-    border-top: 1px solid rgb(53, 55, 57);
-    background: linear-gradient(30deg, rgba(250, 248, 240, 1), rgba(228, 222, 210, 1), rgba(64, 124, 201, 0.7));
+    border-top: 1px solid rgb(var(--cobalt));
+    background: linear-gradient(30deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.9), rgba(var(--biotek-blue), 0.63));
 }
 
 /* End Footer */
