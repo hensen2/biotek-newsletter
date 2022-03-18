@@ -94,7 +94,6 @@ body {
 
 .nav-logo {
     width: 200px;
-    margin-right: auto;
 }
 
 .nav-list {
@@ -110,7 +109,7 @@ body {
 }
 
 .nav-list li a {
-    font-family: var(--sans-heading);
+    font-family: var(--sans-heading), Helvetica, sans-serif;
     font-size: 150%;
     font-style: bold;
     color: rgba(var(--cobalt), 1);
@@ -130,22 +129,65 @@ body {
 
 /* Main Styling */
 
+.div-border {
+    height: 2px;
+    background: rgb(228,222,210);
+    background: linear-gradient(90deg, rgba(var(--light-taupe), 0.8) 0%, rgba(var(--cobalt), 0.7) 50%, rgba(var(--biotek-blue), 1) 100%);
+}
+
 .main-container {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid rgba(var(--cobalt), 1);
 }
 
 .top-container {
     display: flex;
-    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30em;
     width: 100vw;
     background: linear-gradient(185deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.5), rgba(var(--baby-aqua), 0.45));
 }
 
+.top-image-container {
+    position: relative;
+    z-index: 1;
+    height: 20em;
+    width: 90%;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-image-container::before {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: url('/img/images/background-dna.jpg');
+    background-color: rgb(var(--milk-white));
+    opacity: 0.2;
+}
+
+.top-container h1 {
+    font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
+    font-size: 3em;
+    margin-inline-start: 7%;
+}
+
+.top-container p {
+    font-family: var(--sans-content), Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    margin-inline-start: 7%;
+    margin-inline-end: 50%;
+}
+
 .middle-container {
     display: flex;
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
@@ -165,7 +207,11 @@ body {
 
 .glass-container {
     display: flex;
-    height: 92vh;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90%;
     width: 95vw;
     margin: 10px;
     border-radius: 10px;
@@ -173,6 +219,17 @@ body {
     background-color: var(--glass);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    font-family: var(--monospace), 'Courier New', Courier, monospace;
+    font-size: 3em;
+    color: rgba(var(--cobalt), 1);
+    flex-basis: 25%;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 /* End Main */
@@ -184,7 +241,6 @@ body {
     flex-direction: row;
     height: 40vh;
     width: 100vw;
-    border-top: 1px solid rgb(var(--cobalt));
     background: linear-gradient(30deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.9), rgba(var(--biotek-blue), 0.63));
 }
 
