@@ -17,7 +17,7 @@
         <!-- Semantic header section -->
         <header class="header-container">
             <a href="./index.html" class="logo-href">
-                <img class="nav-logo" src="./img/logos/Vectors/Logo - Alternate Layout - Black-Milk.svg" alt="logo">
+                <img class="nav-logo" src="./img/logos/Vectors/Logo - Alternate Layout - Black-Milk.svg" alt="header logo">
             </a>
             <nav>
                 <ul class="nav-list">
@@ -62,6 +62,7 @@
                         <li>Research</li>
                         <li>Bioinformatics</li>
                         <li>Artificial Intelligence</li>
+                        <li><a href="./pages/sectors.html">Learn More</a></li>
                     </ul>
                 </div>
                 <div class="glass-container">
@@ -73,6 +74,7 @@
                         <li>Medical Devices</li>
                         <li>Future of Medicine</li>
                         <li>Personalized Medicine</li>
+                        <li><a href="./pages/clinical.html">Learn More</a></li>
                     </ul>
                 </div>
                 <div class="glass-container">
@@ -84,6 +86,7 @@
                         <li>CRISPR / Cas9</li>
                         <li>Gene Therapies</li>
                         <li>Next-Generation Sequencing</li>
+                        <li><a href="./pages/trending-topics.html">Learn More</a></li>
                     </ul>
                 </div>
             </div>
@@ -96,10 +99,57 @@
                 <!-- Bottom-left container -->
                 <div class="left-container">
                     <h2>Latest News</h2>
+
+                    <!-- Container for Latest News cards -->
+                    <div class="news-container">
+                        <div class="news-card">
+                            <div>
+                                <img class="news-card-img" src="/img/images/lab-bench.png" alt="lab bench">
+                                <p class="pic-caption">Story 1</p>
+                            </div>
+                            <div class="news-card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea error enim quisquam facere aliquam adipisci quis quasi. Laboriosam error nulla eius libero totam itaque tempora, delectus quos repellat eos.</p>
+                            </div>
+                        </div>
+                        <div class="news-card">
+                            <div>
+                                <img class="news-card-img" src="/img/images/female-researcher.png" alt="female researcher">
+                                <p class="pic-caption">Story 2</p>
+                            </div>
+                            <div class="news-card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea error enim quisquam facere aliquam adipisci quis quasi. Laboriosam error nulla eius libero totam itaque tempora, delectus quos repellat eos.</p>
+                            </div>
+                        </div>
+                        <div class="news-card">
+                            <div>
+                                <img class="news-card-img" src="/img/images/male-researcher.png" alt="male researcher">
+                                <p class="pic-caption">Story 3</p>
+                            </div>
+                            <div class="news-card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea error enim quisquam facere aliquam adipisci quis quasi. Laboriosam error nulla eius libero totam itaque tempora, delectus quos repellat eos.</p>
+                            </div>
+                        </div>
+                        <div class="news-card">
+                            <div>
+                                <img class="news-card-img" src="/img/images/stock-researcher.png" alt="stock researcher">
+                                <p class="pic-caption">Story 4</p>
+                            </div>
+                            <div class="news-card-content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ea error enim quisquam facere aliquam adipisci quis quasi. Laboriosam error nulla eius libero totam itaque tempora, delectus quos repellat eos.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 <!-- Bottom-right container -->
                 <div class="right-container">
                     <h2>Subscribe to our newletter!</h2>
+
+                    <!-- Subscribe email form -->
+                    <form class="homepage-form" action="#">
+                        <input class="newsletter-email" type="email" name="email" placeholder="Enter your email address" required>
+                        <button class="newsletter-button" type="submit">Subscribe!</button>
+                    </form>
                 </div>
             </div>
         </main>
@@ -109,7 +159,41 @@
 
         <!-- Semantic footer section -->
         <footer class="footer-container">
-
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="./index.html">
+                        <img class="footer-logo" src="/img/logos/Vectors/Logo - Black.svg" alt="footer logo">
+                    </a>
+                </div>
+                <div class="site-map">
+                    <h3 class="footer-header">Site Map</h3>
+                    <ul class="footer-list">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./pages/sectors.html">Sectors</a></li>
+                        <li><a href="./pages/clinical.html">Clinical</a></li>
+                        <li><a href="./pages/trending-topics.html">Trends</a></li>
+                        <li><a href="./pages/resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3 class="footer-header">Contact</h3>
+                    <ul class="footer-list">
+                        <li>Address</li>
+                        <p>600 W Chicago Ave</p>
+                        <p class="contact-margin">Chicago, IL 60654</p>
+                        
+                        <li>Phone</li>
+                        <p class="contact-margin">(312)123-4567</p>
+                
+                        <li>Email</li>
+                        <p class="contact-margin">contact@bioteknews.com</p>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                <p>Copyright © 2022 BioTek News</p>
+            </div>
         </footer>
         <script src="./js/app.js"></script>
     </body>

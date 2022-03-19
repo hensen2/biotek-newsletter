@@ -203,7 +203,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 77%;
+    height: 90%;
     width: 25em;
     padding: 2em;
     border-radius: 10px;
@@ -231,17 +231,27 @@ body {
     align-items: center;
     font-family: var(--sans-content), Arial, Helvetica, sans-serif;
     font-size: 1.2em;
+    color: rgba(var(--cobalt), 1);
     list-style-type: none;
     margin: 0;
     padding: 0;
     line-height: 2.5;
 }
 
+.glass-container ul li a {
+    text-decoration: none;
+    color: rgba(var(--biotek-blue), 1);
+}
+
+.glass-container ul li a:hover {
+    text-decoration: underline;
+}
+
 .bottom-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 40em;
+    height: 45em;
     width: 100vw;
     padding: 0 2em;
     background: linear-gradient(130deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.9), rgba(var(--biotek-blue), 0.6));
@@ -249,31 +259,109 @@ body {
 
 .bottom-container .left-container {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: flex-start;
     height: 100%;
-    width: 75%;
+    width: 70%;
     padding: 3em;
+    padding-right: 4em;
 }
 
 .bottom-container .left-container h2 {
     font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
     font-size: 2.5em;
+    margin-left: 1em;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+    padding: 1em;
+}
+
+.news-card {
+    display: flex;
+    align-items: stretch;
+    height: 16em;
+    width: 30em;
+    margin: 1em;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.news-card-img {
+    height: 12em;
+    width: 16em;
+    margin: 0.8em 0 0 0.8em;
+    border-radius: 5px;
+}
+
+.pic-caption {
+    margin: 0.8em;
+    font-family: var(--monospace), 'Courier New', Courier, monospace;
+    color: rgba(var(--cobalt), 1);
+}
+
+.news-card-content {
+    width: 12em;
+    margin: 0.8em;
+    font-family: var(--sans-content), Arial, Helvetica, sans-serif;
+    color: rgba(var(--cobalt), 1);
+    font-size: 95%;
+    text-align: right;
 }
 
 .bottom-container .right-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    height: 100%;
-    width: 25%;
-    padding: 2em;
+    justify-content: center;
+    height: 90%;
+    width: 30%;
+    padding: 10em 1.5em;
+    border-left: 1.5px solid rgba(var(--cobalt), 0.4);
 }
 
 .bottom-container .right-container h2 {
     font-family: var(--monospace), 'Courier New', Courier, monospace;
     font-size: 1.7em;
     line-height: 1;
+    margin-bottom: 1em;
+}
+
+.newsletter-email {
+    width: 100%;
+    height: 54px;
+    padding: 12px 15px;
+    font-weight: 400;
+    color: rgba(var(--cobalt), 1);
+    font-family: var(--monospace), 'Courier New', Courier, monospace;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    outline: none;
+}
+
+.newsletter-button {
+    width: 120px;
+    height: 50px;
+    padding: 1px 0;
+    right: 0;
+    margin-top: 3px;
+    background-color: #f6faff;
+    border: 1px solid transparent;
+    color: rgba(var(--cobalt), 1);
+    font-family: var(--monospace), 'Courier New', Courier, monospace;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 200ms all ease-in-out;
+}
+
+.newsletter-button:hover {
+    color: white;
+    background-color: rgba(var(--biotek-blue), 1);
 }
 
 /* End Main */
@@ -282,10 +370,76 @@ body {
 
 .footer-container {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     height: 40vh;
     width: 100vw;
+    padding-top: 2em;
     background: linear-gradient(30deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.9), rgba(var(--biotek-blue), 0.63));
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 75%;
+    width: 60%;
+}
+
+.footer-container hr {
+    display: block;
+    height: 1px;
+    width: 100%;
+    border: none;
+    background-color: rgba(var(--cobalt), 0.6);
+}
+
+.footer-logo {
+    height: 7.5em;
+    width: 10.5em;
+    margin-top: 1.2em;
+}
+
+.footer-header {
+    font-family: var(--monospace), 'Courier New', Courier, monospace;
+    color: rgba(var(--biotek-blue), 1);
+    text-decoration: underline;
+}
+
+.footer-list {
+    font-family: var(--sans-content), Arial, Helvetica, sans-serif;
+    color: rgba(var(--cobalt), 1);
+    padding: 0;
+    list-style: none;
+}
+
+.footer-list a {
+    text-decoration: none;
+    color: rgba(var(--cobalt), 1);
+}
+
+.footer-list a:hover {
+    color: rgba(var(--biotek-blue), 1);
+}
+
+.footer-contact .footer-list li {
+    font-family: var(--sans-content), Arial, Helvetica, sans-serif;
+    color: rgba(var(--biotek-blue), 1);
+}
+
+.footer-list p {
+    padding-left: 10px;
+}
+
+.contact-margin {
+    margin-bottom: 0.8em;
+}
+
+.copyright {
+    font-family: var(--sans-content), Arial, Helvetica, sans-serif;
+    color: rgba(var(--cobalt), 0.8);
+    font-size: 80%;
 }
 
 /* End Footer */
