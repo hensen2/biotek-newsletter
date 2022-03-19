@@ -4,7 +4,7 @@
 
 :root {
     --milk-white: 250, 248, 240;
-    --cobalt: 53, 55, 57;
+    --cobalt: 33, 35, 37;
     --light-taupe: 228, 222, 210;
     --baby-aqua: 165, 212, 220;
     --biotek-blue: 64, 124, 201;
@@ -153,8 +153,8 @@ body {
 .top-image-container {
     position: relative;
     z-index: 1;
-    height: 20em;
-    width: 90%;
+    height: 25em;
+    width: 95%;
     border-radius: 5px;
     overflow: hidden;
     display: flex;
@@ -169,7 +169,7 @@ body {
     top: 0;
     content: url('/img/images/background-dna.jpg');
     background-color: rgb(var(--milk-white));
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 .top-container h1 {
@@ -187,33 +187,25 @@ body {
 
 .middle-container {
     display: flex;
-    height: 50vh;
-    width: 100vw;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
     align-items: center;
+    height: 30em;
+    width: 100vw;
     background-color: rgba(var(--milk-white), 1);
-    opacity: 0.6;
+    opacity: 1;
     background-image: repeating-radial-gradient( circle at 0 0, transparent 0, rgba(var(--milk-white), 0.9) 13px ),
                     repeating-linear-gradient( rgba(var(--baby-aqua), 1), 
                     rgba(var(--biotek-blue), 1) );
 }
 
-.bottom-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    background: linear-gradient(130deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.9), rgba(var(--biotek-blue), 0.6));
-}
-
 .glass-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-direction: column;
     align-items: center;
-    height: 90%;
-    width: 95vw;
-    margin: 10px;
+    height: 77%;
+    width: 25em;
+    padding: 2em;
     border-radius: 10px;
     border: 2px solid rgba(var(--cobalt), 0.7);
     background-color: var(--glass);
@@ -221,15 +213,67 @@ body {
     -webkit-backdrop-filter: blur(4px);
 }
 
-.card {
-    display: flex;
-    justify-content: center;
+.glass-container h2 {
     font-family: var(--monospace), 'Courier New', Courier, monospace;
-    font-size: 3em;
     color: rgba(var(--cobalt), 1);
-    flex-basis: 25%;
-    padding-left: 8px;
-    padding-right: 8px;
+}
+
+.glass-container hr {
+    height: 1px;
+    width: 83%;
+    border: none;
+    background-color: rgba(var(--cobalt), 1);
+}
+
+.glass-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--sans-content), Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 2.5;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40em;
+    width: 100vw;
+    padding: 0 2em;
+    background: linear-gradient(130deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.9), rgba(var(--biotek-blue), 0.6));
+}
+
+.bottom-container .left-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 75%;
+    padding: 3em;
+}
+
+.bottom-container .left-container h2 {
+    font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+}
+
+.bottom-container .right-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 25%;
+    padding: 2em;
+}
+
+.bottom-container .right-container h2 {
+    font-family: var(--monospace), 'Courier New', Courier, monospace;
+    font-size: 1.7em;
+    line-height: 1;
 }
 
 /* End Main */
