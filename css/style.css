@@ -145,21 +145,21 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 30em;
+    height: 24em;
     width: 100vw;
-    background: linear-gradient(185deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.5), rgba(var(--baby-aqua), 0.45));
+    background: linear-gradient(90deg, rgba(var(--milk-white), 1), rgba(var(--light-taupe), 0.5), rgba(var(--baby-aqua), 0.65));
 }
 
 .top-image-container {
     position: relative;
     z-index: 1;
-    height: 25em;
-    width: 95%;
-    border-radius: 5px;
+    height: 20em;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: rgb(var(--milk-white));
 }
 
 .top-image-container::before {
@@ -169,13 +169,22 @@ body {
     top: 0;
     content: url('/img/images/background-dna.jpg');
     background-color: rgb(var(--milk-white));
-    opacity: 0.4;
+    opacity: 0.55;
 }
 
 .top-container h1 {
     font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
-    font-size: 3em;
+    font-size: 3.5em;
     margin-inline-start: 7%;
+}
+
+.top-container h1::after {
+    content: '';
+    width: 1.5em;
+    height: 3px;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--milk-white));
 }
 
 .top-container p {
@@ -273,7 +282,7 @@ body {
     margin-left: 1em;
 }
 
-.news-container {
+.index-news-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -444,41 +453,168 @@ body {
 
 /* End Footer */
 
+/* About page main content */
 
-/* Sectors page main content */
-
-.sectors-container {
+.about-container {
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    height: 70em;
+    height: 30em;
     width: 100vw;
     padding: 3em 6em; 
 }
 
-.sectors-container::before {
+.about-container::before {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: url('/img/images/background-1.jpg');
+    opacity: 0.6;
+}
+
+.about-container h1 {
+    display: block;
+    font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
+    color: rgba(var(--milk-white), 1);
+    font-size: 4.5em;
+    margin-left: 1.5em;
+}
+
+.about-container h1::after {
+    content: '';
+    width: 2em;
+    height: 3px;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--milk-white));
+}
+
+/* News page main content */
+
+.news-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 60em;
+    width: 100vw;
+    padding: 3em 6em;
+}
+
+.news-container::before {
     z-index: -1;
     position: absolute;
     left: 0;
     top: 0;
     content: url('/img/images/background-2.jpg');
-    opacity: 0.4;
+    opacity: 0.6;
 }
 
-.sectors-container h1 {
+.news-container h1 {
     display: block;
     font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
     color: rgba(var(--cobalt), 1);
-    font-size: 200%;
+    font-size: 4.5em;
+    margin-left: 1em;
 }
 
-.sectors-news-wrapper {
+.news-container h1::after {
+    content: '';
+    width: 2em;
+    height: 3px;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--cobalt));
+    margin-bottom: 1em;
+}
+
+.news-wrapper {
     display: flex;
     flex-direction: row;
     height: 20em;
     width: 100%;
     justify-content: space-between;
     align-items: center;
+}
+
+/* FAQ page main content */
+
+.faq-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 20em;
+    width: 100vw;
+    padding: 3em 6em; 
+}
+
+.faq-container::before {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: url('/img/images/background-2.jpg');
+    opacity: 0.6;
+}
+
+.faq-container h1 {
+    display: block;
+    font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
+    color: rgba(var(--cobalt), 1);
+    font-size: 4.5em;
+    margin-left: 1.5em;
+}
+
+.faq-container h1::after {
+    content: '';
+    width: 2em;
+    height: 3px;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--cobalt));
+}
+
+/* Resources page main content */
+
+.resources-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 20em;
+    width: 100vw;
+    padding: 3em 6em; 
+}
+
+.resources-container::before {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: url('/img/images/background-2.jpg');
+    opacity: 0.6;
+}
+
+.resources-container h1 {
+    display: block;
+    font-family: var(--sans-heading), Arial, Helvetica, sans-serif;
+    color: rgba(var(--cobalt), 1);
+    font-size: 4.5em;
+    margin-left: 1.5em;
+}
+
+.resources-container h1::after {
+    content: '';
+    width: 2em;
+    height: 3px;
+    display: block;
+    position: relative;
+    background-color: rgb(var(--cobalt));
 }
